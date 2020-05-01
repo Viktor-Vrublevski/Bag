@@ -31,14 +31,14 @@ public class Bag {
         System.out.printf("Общая стоимость: %f", totalCost(result));
     }
 
-    public int totalWeight(List<Item> items){
+    private int totalWeight(List<Item> items){
         int total = 0;
         for (int i = 0; i <items.size() ; i++) {
             total = total + items.get(i).getWeight();
         }
         return total;
     }
-    public double totalCost(List<Item> items){
+    private double totalCost(List<Item> items){
         double total = 0;
         for (int i = 0; i <items.size() ; i++) {
             total = total + items.get(i).getCost();
@@ -46,7 +46,7 @@ public class Bag {
         return total;
     }
 
-    public void recursion(List<Item> list){
+    private void recursion(List<Item> list){
         if (list.size() == 0) return;
         if (totalWeight(list) <= weight && !listList.contains(list)){
             listList.add(list);
@@ -60,7 +60,7 @@ public class Bag {
         }
     }
 
-    public List<Item> returnResult(){
+    private List<Item> returnResult(){
         double total = 0;
         int index = 0;
         for (int i = 0; i <listList.size(); i++) {

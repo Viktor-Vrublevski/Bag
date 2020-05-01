@@ -5,9 +5,9 @@ import java.util.List;
 
 //  Склад предметов
 public class StorageItems {
-    public  final List<src.test.Item> ITEMS = new ArrayList<>();
+    public  final List<Item> ITEMS = new ArrayList<>();
 
-    public StorageItems(src.test.Item...items) {
+    public StorageItems(Item...items) {
         for (Item item : items){
             ITEMS.add(item);
         }
